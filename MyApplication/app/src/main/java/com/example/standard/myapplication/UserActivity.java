@@ -19,6 +19,6 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
         User user = Parcels.unwrap(getIntent().getBundleExtra("Bundled Parcel").getParcelable("user"));
-        tvContent.setText("Name is " + user.getName() + ", age is " + user.getAge() + " years old. He is from " + user.getLocation());
+        //tvContent.setText("Name is " + user.getName() + ", age is " + user.getAge() + " years old. He is from " + user.getLocation());
     }
 }

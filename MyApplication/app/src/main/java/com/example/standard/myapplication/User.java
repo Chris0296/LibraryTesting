@@ -1,21 +1,47 @@
 package com.example.standard.myapplication;
 
+import com.google.gson.annotations.SerializedName;
+
 import org.parceler.Parcel;
 
-@Parcel
+//@Parcel
 public class User {
-    String name;
-    String age;
-    String location;
 
-    public User() {
+    @SerializedName("id")
+    private Integer id;
+    @SerializedName("name")
+    private String name;
+    @SerializedName("username")
+    private String username;
+    @SerializedName("email")
+    private String email;
+    @SerializedName("address")
+    private Address address;
+    @SerializedName("phone")
+    private String phone;
+    @SerializedName("website")
+    private String website;
+    @SerializedName("company")
+    private Company company;
 
+
+    public User(Integer id, String name, String username, String email, Address address, String phone, String website, Company company) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
+        this.website = website;
+        this.company = company;
     }
 
-    public User(String name,String age, String location) {
-        this.name = name;
-        this.age = age;
-        this.location = location;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -26,19 +52,51 @@ public class User {
         this.name = name;
     }
 
-    public String getAge() {
-        return age;
+    public String getUsername() {
+        return username;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getLocation() {
-        return location;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }
